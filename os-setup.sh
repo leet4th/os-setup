@@ -14,7 +14,7 @@ sudo reboot now
 
 # Get info about graphic card and availible drivers
 ubuntu-drivers devices
-sudo apt install nvidia-driver-470 # pick reccomended
+sudo apt install nvidia-driver-470 # pick recommended
 prime-select query
 
 # Install vim and gvim
