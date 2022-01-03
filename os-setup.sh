@@ -111,3 +111,10 @@ sudo docker run --rm --gpus all nvidia/cuda:11.0-base nvidia-smi
 
 # miniconda
 # Download installer script from website and run it
+conda install numpy scipy matplotlib ipython jupyter pandas sympy nose
+conda install -c conda-forge jupyterlab
+conda install scikit-learn seaborn requests pytest
+conda install networkx pyparsing tqdm joblib statsmodels
+conda install graphviz
+
+
