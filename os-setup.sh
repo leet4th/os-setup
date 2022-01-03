@@ -109,3 +109,5 @@ sudo systemctl restart docker
 # Test NVIDIA docker setup
 sudo docker run --rm --gpus all nvidia/cuda:11.0-base nvidia-smi
 
+# miniconda
+# Download installer script from website and run it
