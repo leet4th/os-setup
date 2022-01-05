@@ -115,6 +115,6 @@ conda install numpy scipy matplotlib ipython jupyter pandas sympy nose
 conda install -c conda-forge jupyterlab
 conda install scikit-learn seaborn requests pytest
 conda install networkx pyparsing tqdm joblib statsmodels
-conda install graphviz
 
-
+# Network tools (netstat)
+sudo apt install net-tools
