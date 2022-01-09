@@ -10,16 +10,13 @@ pip install --upgrade pip
 pip install pygame numpy
 
 # 1. Set up the Debian repository in the system:
-
-    sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 1AF1527DE64CB8D9
-    sudo add-apt-repository "deb [arch=amd64] http://dist.carla.org/carla $(lsb_release -sc) main"
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 1AF1527DE64CB8D9
+sudo add-apt-repository "deb [arch=amd64] http://dist.carla.org/carla $(lsb_release -sc) main"
 
 # 2. Install CARLA and check for the installation in the /opt/ folder:
-
-    sudo apt-get update # Update the Debian package index
-    sudo apt-get install carla-simulator # Install the latest CARLA version, or update the current installation
-    cd /opt/carla-simulator # Open the folder where CARLA is installed
-
+sudo apt-get update # Update the Debian package index
+sudo apt-get install carla-simulator # Install the latest CARLA version, or update the current installation
+cd /opt/carla-simulator # Open the folder where CARLA is installed
 
 #Extract the package:
 #
@@ -46,3 +43,6 @@ pip install pygame numpy
 
 pip install <wheel-file-name>.whl
 
+# Test run
+cd path/to/carla/root
+./CarlaUE4.sh

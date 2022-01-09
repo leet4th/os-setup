@@ -118,3 +118,13 @@ conda install networkx pyparsing tqdm joblib statsmodels
 
 # Network tools (netstat)
 sudo apt install net-tools
+
+# Sticky note app
+sudo apt install xpad
+
+# Slack
+sudo snap install slack --classic
+
+# Bitwarden password manager
+sudo snap install bitwarden
+
