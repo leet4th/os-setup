@@ -128,3 +128,6 @@ sudo snap install slack --classic
 # Bitwarden password manager
 sudo snap install bitwarden
 
+# Bluejeans - OMSCS office hours
+sudo snap install bluejeans --edge
+
