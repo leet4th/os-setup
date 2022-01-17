@@ -112,6 +112,11 @@ if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
 
+# My setup definitions
+if [ -f ~/.bash_mysetup ]; then
+    source ~/.bash_mysetup
+fi
+
 # CARLA sim definitions
 if [ -f ~/.bash_carla ]; then
     source ~/.bash_carla
