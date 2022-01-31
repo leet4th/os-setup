@@ -131,3 +131,5 @@ sudo snap install bitwarden
 # Bluejeans - OMSCS office hours
 sudo snap install bluejeans --edge
 
+# Freecad
+sudo apt-get install freecad
