@@ -135,5 +135,10 @@ sudo snap install bluejeans --edge
 sudo apt-get install freecad
 
 # Spotify
+# Need to open with the following arg: --force-device-scale-factor=2.5
 snap install spotify
+# Modify the snap Exec to include argument
+sudo vi /var/lib/snapd/desktop/applications/spotify_spotify.desktop
+Exec=env BAMF_DESKTOP_FILE_HINT=/var/lib/snapd/desktop/applications/spotify_spotify.desktop /snap/bin/spotify --force-device-scale-factor=2.5 %U
+
 

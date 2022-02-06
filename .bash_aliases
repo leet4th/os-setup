@@ -11,6 +11,9 @@ alias lld='ls -ltd */'
 # gVim
 alias g='gvim -p '
 
+# Spotify - open with scaling
+alias spotify='spotify --force-device-scale-factor=2.5'
+
 # Starts a server on local network to share current directory
 share () {
     # Print out host address
