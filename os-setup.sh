@@ -133,3 +133,7 @@ sudo snap install bluejeans --edge
 
 # Freecad
 sudo apt-get install freecad
+
+# Spotify
+snap install spotify
+
