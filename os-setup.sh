@@ -95,7 +95,7 @@ sudo docker run hello-world
 sudo groupadd docker
 sudo usermod -aG docker $USER
 newgrp docker
-docker run hello-world # test without sudo
+docker run hello-world # test without sudo (need to restart for new group to take effect)
 
 # Setting up NVIDIA container toolkit
 distribution=$(. /etc/os-release;echo $ID$VERSION_ID) \
@@ -111,6 +111,7 @@ sudo docker run --rm --gpus all nvidia/cuda:11.0-base nvidia-smi
 
 # miniconda
 # Download installer script from website and run it
+conda config --set auto_activate_base false
 conda install numpy scipy matplotlib ipython jupyter pandas sympy nose
 conda install -c conda-forge jupyterlab
 conda install scikit-learn seaborn requests pytest
@@ -137,7 +138,8 @@ sudo apt-get install freecad
 # Spotify
 # Need to open with the following arg: --force-device-scale-factor=2.5
 snap install spotify
-# Modify the snap Exec to include argument
+
+# Manually modify the snap Exec to include argument
 sudo vi /var/lib/snapd/desktop/applications/spotify_spotify.desktop
 Exec=env BAMF_DESKTOP_FILE_HINT=/var/lib/snapd/desktop/applications/spotify_spotify.desktop /snap/bin/spotify --force-device-scale-factor=2.5 %U
 
