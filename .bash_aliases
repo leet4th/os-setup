@@ -23,4 +23,7 @@ share () {
     python -m http.server $1
 }
 
+splitPath () {
+    sed 's/:/\n/g' <<< "$PATH"
+}
 
