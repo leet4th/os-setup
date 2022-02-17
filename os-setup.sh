@@ -23,6 +23,9 @@ sudo apt install vim-gtk
 
 # Build tools
 sudo apt-get install build-essential
+sudo apt install libssl-dev
+
+sudo apt-get install libboost-all-dev
 
 # git
 sudo apt install git
