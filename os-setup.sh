@@ -100,6 +100,17 @@ sudo usermod -aG docker $USER
 newgrp docker
 docker run hello-world # test without sudo (need to restart for new group to take effect)
 
+# Docker Compose https://docs.docker.com/compose/install/
+# Download the current stable release of Docker Compose
+sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+# Apply executable permissions to the binary
+sudo chmod +x /usr/local/bin/docker-compose
+
+# Download completion script to /etc/bash_completion.d/
+sudo curl \
+    -L https://raw.githubusercontent.com/docker/compose/1.29.2/contrib/completion/bash/docker-compose \
+    -o /etc/bash_completion.d/docker-compose
+
 # Setting up NVIDIA container toolkit
 distribution=$(. /etc/os-release;echo $ID$VERSION_ID) \
    && curl -s -L https://nvidia.github.io/nvidia-docker/gpgkey | sudo apt-key add - \
