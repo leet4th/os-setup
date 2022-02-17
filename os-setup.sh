@@ -133,6 +133,7 @@ conda install networkx pyparsing tqdm joblib statsmodels
 
 # Network tools (netstat)
 sudo apt install net-tools
+sudo apt install nmap
 
 # Sticky note app
 sudo apt install xpad
@@ -157,4 +158,22 @@ snap install spotify
 sudo vi /var/lib/snapd/desktop/applications/spotify_spotify.desktop
 Exec=env BAMF_DESKTOP_FILE_HINT=/var/lib/snapd/desktop/applications/spotify_spotify.desktop /snap/bin/spotify --force-device-scale-factor=2.5 %U
 
+# Raspberry Pi Imager
+# Manual download here https://www.raspberrypi.com/software/
+
+# SSH raspberry pi
+# Identify my network's base address
+ifconfig
+# scan under mask
+nmap -sP <inet address from ifconfig>/24
+ssh pi@<address>
+
+# Alternativly, raspberrypi hostname should be raspberrypi.local
+ping raspberrypi.local
+ssh pi@raspberrypi.local
+
+# Setup sshkey for connecting with raspberry pi
+# This will add the pub key to .ssh/authorized_keys on raspberrypi
+ssh-copy-id -i ~/.ssh/id_ed25519 pi@<address>
+ssh-copy-id -i ~/.ssh/id_ed25519 pi@raspberrypi.local
 
