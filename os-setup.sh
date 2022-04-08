@@ -43,6 +43,7 @@ sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub
 # qt
 sudo apt-get install mesa-common-dev
 sudo apt-get install qt5-default
+sudo apt-get install libcanberra-gtk-module
 
 # xxdiff
 sudo apt-get install flex bison
@@ -176,4 +177,10 @@ ssh pi@raspberrypi.local
 # This will add the pub key to .ssh/authorized_keys on raspberrypi
 ssh-copy-id -i ~/.ssh/id_ed25519 pi@<address>
 ssh-copy-id -i ~/.ssh/id_ed25519 pi@raspberrypi.local
+
+# HEIC file format from iphone live photos
+sudo apt install heif-gdk-pixbuf
+
+# Gimp
+sudo apt install gimp
 
