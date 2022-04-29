@@ -184,3 +184,7 @@ sudo apt install heif-gdk-pixbuf
 # Gimp
 sudo apt install gimp
 
+
+# Teensy dev
+sudo apt-get install libusb-dev
+

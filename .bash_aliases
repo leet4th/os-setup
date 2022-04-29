@@ -12,7 +12,15 @@ alias lld='ls -ltd */'
 alias g='gvim -p '
 
 # Spotify - open with scaling
-alias spotify='spotify --force-device-scale-factor=2.5'
+spotify_ () {
+    res=$(xdpyinfo  | grep -oP 'dimensions:\s+\K\S+')
+    if [[ $res == "3840x2160" ]]
+    then
+        spotify --force-device-scale-factor=2.5
+    else
+        spotify
+    fi
+}
 
 # Starts a server on local network to share current directory
 share () {
@@ -26,4 +34,5 @@ share () {
 splitPath () {
     sed 's/:/\n/g' <<< "$PATH"
 }
+alias whichpy='python -c "import sys; print(sys.executable)"'
 

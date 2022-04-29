@@ -583,3 +583,13 @@ rosdep install -i --from-path src --rosdistro galactic -y
 
 # Build
 colcon build --packages-select py_srvcli
+
+
+## Introduction to tf2
+sudo apt-get install ros-galactic-turtle-tf2-py ros-galactic-tf2-tools ros-galactic-tf-transformations
+pip3 install transforms3d
+
+# Run the demo
+ros2 launch turtle_tf2_py turtle_tf2_demo.launch.py
+
+
