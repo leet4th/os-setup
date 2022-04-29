@@ -88,8 +88,8 @@ esac
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
     alias ls='ls --color=auto'
-    #alias dir='dir --color=auto'
-    #alias vdir='vdir --color=auto'
+    alias dir='dir --color=auto'
+    alias vdir='vdir --color=auto'
 
     alias grep='grep --color=auto'
     alias fgrep='fgrep --color=auto'
@@ -99,27 +99,19 @@ fi
 # colored GCC warnings and errors
 #export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
-# Add an "alert" alias for long running commands.  Use like so:
-#   sleep 10; alert
-alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 
-# Alias definitions.
-# You may want to put all your additions into a separate file like
-# ~/.bash_aliases, instead of adding them here directly.
-# See /usr/share/doc/bash-doc/examples in the bash-doc package.
+export PROFILE_ENV="$HOME/os-setup"
 
+# CARLA Sim
+export VK_ICD_FILENAMES="/usr/share/vulkan/icd.d/nvidia_icd.json"
+
+# Source other bash files
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
 
-# My setup definitions
-if [ -f ~/.bash_mysetup ]; then
-    source ~/.bash_mysetup
-fi
-
-# CARLA sim definitions
-if [ -f ~/.bash_carla ]; then
-    source ~/.bash_carla
+if [ -f ~/.bash_functions ]; then
+    . ~/.bash_functions
 fi
 
 # enable programmable completion features (you don't need to enable
@@ -148,9 +140,8 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
-
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/home/lee/google-cloud-sdk/path.bash.inc' ]; then . '/home/lee/google-cloud-sdk/path.bash.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '/home/lee/google-cloud-sdk/completion.bash.inc' ]; then . '/home/lee/google-cloud-sdk/completion.bash.inc'; fi
+## The next line updates PATH for the Google Cloud SDK.
+#if [ -f '/home/lee/google-cloud-sdk/path.bash.inc' ]; then . '/home/lee/google-cloud-sdk/path.bash.inc'; fi
+#
+## The next line enables shell command completion for gcloud.
+#if [ -f '/home/lee/google-cloud-sdk/completion.bash.inc' ]; then . '/home/lee/google-cloud-sdk/completion.bash.inc'; fi

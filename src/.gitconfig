@@ -1,0 +1,12 @@
+[user]
+	email =
+	name =
+
+[alias]
+
+    # Better log
+	l = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+
+    # List git aliases
+    la = "!git config -l | grep alias | cut -c 7-"
+
