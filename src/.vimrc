@@ -58,8 +58,9 @@ if $COLORTERM == 'gnome-terminal'
 endif
 
 try
-    colorscheme wombat256
-    "colorscheme xoria256
+    "colorscheme wombat256
+    colorscheme xoria256
+    "colorscheme feral
     "colorscheme xterm16
     "colorscheme znake
     "colorscheme Atelier_ForestDark
