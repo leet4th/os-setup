@@ -188,3 +188,14 @@ sudo apt install gimp
 # Teensy dev
 sudo apt-get install libusb-dev
 
+# PCL
+sudo apt install libpcl-dev
+
+# GTSAM release 4.0 (2020-10-17)
+# https://launchpad.net/~borglab
+# Add PPA
+sudo add-apt-repository ppa:borglab/gtsam-release-4.0
+sudo apt update  # not necessary since Bionic
+# Install:
+sudo apt install libgtsam-dev libgtsam-unstable-dev
+
