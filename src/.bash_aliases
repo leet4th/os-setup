@@ -31,3 +31,6 @@ alias whichpy='python -c "import sys; print(sys.executable)"'
 
 # Go to profile dir
 alias pro="cd $PROFILE_ENV"
+
+# tree
+alias tree='tree --dirsfirst -I "venv*|__pycache__"'
