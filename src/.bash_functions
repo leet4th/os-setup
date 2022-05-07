@@ -19,7 +19,7 @@ function pipua() {
     if [ -z "$VIRTUAL_ENV" ]; then
         echo "venv not set"
     else
-        pip uninstall -y r<(pip freeze)
+        pip uninstall -y -r<(pip freeze)
     fi
 }
 

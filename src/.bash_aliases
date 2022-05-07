@@ -13,6 +13,7 @@ alias llt="lt" # habit :)
 
 # vim
 alias g='gvim -p '
+alias gipy='grep -lr --include \*.py --exclude-dir="venv*" "IPython" . | xargs gvim -p'
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
