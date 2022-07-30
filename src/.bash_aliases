@@ -29,6 +29,9 @@ alias pip=pip3
 # Prints out the python executable path
 alias whichpy='python -c "import sys; print(sys.executable)"'
 
+# Prints out python version information, including pyenv versions
+alias pv='python --version; whichpy; pyenv versions'
+
 # Go to profile dir
 alias pro="cd $PROFILE_ENV"
 
