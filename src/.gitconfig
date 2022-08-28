@@ -2,6 +2,10 @@
 	email =
 	name =
 
+# All omscs repos stored with ~/omscs
+[includeIf "gitdir:~/omscs/"]
+    path = .gitconfig-omscs
+
 [alias]
 
     # Better log
